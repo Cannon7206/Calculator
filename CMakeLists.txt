@@ -16,9 +16,7 @@ find_package(Qt6 COMPONENTS
 add_executable(Calculator main.cpp
         MainWindow.cpp
         MainWindow.h
-        gui.cpp
         gui.h
-        gui.ui
 )
 target_link_libraries(Calculator
         Qt::Core
