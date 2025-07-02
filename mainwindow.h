@@ -19,20 +19,20 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 
-private slots:
-    void onEnterClicked();
-    void onClearClicked();
-    void onRParaClicked(); //right parathesis
-    void onLParaClicked(); //left parathesis
-    void onSquareClicked();
-    void onFactorialClicked();
-    void onExpPowerClicked();
-    void onPowerClicked();
-    void onTanClicked();
-    void onSinClicked();
-    void onCosClicked();
-    void onZeroClicked();
-    void onOneClicked();
+private slots:                      //buttons
+    void onEnterClicked();          //enter
+    void onClearClicked();          //clear console
+    void onRParaClicked();          //right parathesis
+    void onLParaClicked();          //left parathesis
+    void onSquareClicked();         //square
+    void onFactorialClicked();      //factorio
+    void onExpPowerClicked();       //euler's number raised to a power
+    void onPowerClicked();          //raise to a power
+    void onTanClicked();            //tangent
+    void onSinClicked();            //sine
+    void onCosClicked();            //cosine
+    void onZeroClicked();           //zero
+    void onOneClicked();            //one
     void onTwoClicked();
     void onThreeClicked();
     void onFourClicked();

@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->goDown, &QPushButton::clicked, this, &MainWindow::onGoDownClicked);
     connect(ui->goLeft, &QPushButton::clicked, this, &MainWindow::onGoLeftClicked);
     connect(ui->goRight, &QPushButton::clicked, this, &MainWindow::onGoRightClicked);
+    connect(ui->on, &QPushButton::clicked, this, &MainWindow::onOnClicked);
 }
 
 void MainWindow::onEnterClicked() {
