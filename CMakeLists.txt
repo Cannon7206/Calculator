@@ -11,16 +11,18 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Svg
         REQUIRED)
 
 add_executable(Calculator main.cpp
-        MainWindow.cpp
-        MainWindow.h
-        gui.h
+        mainwindow.cpp
+        mainwindow.h
+        mainwindow.ui
 )
 target_link_libraries(Calculator
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Svg
 )
 
