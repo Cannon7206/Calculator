@@ -3,9 +3,10 @@
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    QApplication::setApplicationName("GUI");
+    QApplication::setApplicationName("Calculator");
 
     MainWindow window;
     window.show();
-    return app.exec();
+    window.setWindowTitle("Calculator");
+    return QApplication::exec();
 }
