@@ -594,7 +594,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget_2">
+   <widget class="QGroupBox" name="gridGroupBox_2">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -684,7 +684,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="gridLayoutWidget_3">
+   <widget class="QGroupBox" name="gridGroupBox_3">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -763,7 +763,10 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="QTextBrowser" name="textBrowser"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="textEdit"/>
      </item>
     </layout>
    </widget>

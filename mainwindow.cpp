@@ -56,101 +56,109 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->on, &QPushButton::clicked, this, &MainWindow::onOnClicked);
 }
 
+
+
 void MainWindow::onEnterClicked() {
-    std::cout << "enter clicked" << std::endl;
+    QString input = ui->textEdit->text();
+    ui->textBrowser->append(input + " = ");
+    ui->textEdit->clear();
 }
 void MainWindow::onClearClicked() {
-    std::cout << "clear clicked" << std::endl;
+    ui->textEdit->clear();
 }
 void MainWindow::onRParaClicked() {
-    std::cout << ")" << std::endl;
+    ui->textEdit->insert("(");
 }
 void MainWindow::onLParaClicked() {
-    std::cout << "(" << std::endl;
+    ui->textEdit->insert("(");
 }
 void MainWindow::onSquareClicked() {
-    std::cout << "^2" << std::endl;
+    ui->textEdit->insert("^");
 }
 void MainWindow::onFactorialClicked() {
-    std::cout << "!" << std::endl;
+    ui->textEdit->insert("!");
 }
 void MainWindow::onExpPowerClicked() {
-    std::cout << "e^x" << std::endl;
+    ui->textEdit->insert("e^x");
 }
 void MainWindow::onPowerClicked() {
-    std::cout << "^" << std::endl;
+    ui->textEdit->insert("^");
 }
 void MainWindow::onTanClicked() {
-    std::cout << "tan" << std::endl;
+    ui->textEdit->insert("tan(");
 }
 void MainWindow::onSinClicked() {
-    std::cout << "sin" << std::endl;
+    ui->textEdit->insert("sin(");
 }
 void MainWindow::onCosClicked() {
-    std::cout << "cos" << std::endl;
+    ui->textEdit->insert("cos(");
 }
 void MainWindow::onZeroClicked() {
-    std::cout << "0" << std::endl;
+    ui->textEdit->insert("0");
 }
 void MainWindow::onOneClicked() {
-    std::cout << "1" << std::endl;
+    ui->textEdit->insert("1");
 }
 void MainWindow::onTwoClicked() {
-    std::cout << "2" << std::endl;
+    ui->textEdit->insert("2");
 }
 void MainWindow::onThreeClicked() {
-    std::cout << "3" << std::endl;
+    ui->textEdit->insert("3");
 }
 void MainWindow::onFourClicked() {
-    std::cout << "4" << std::endl;
+    ui->textEdit->insert("4");
 }
 void MainWindow::onFiveClicked() {
-    std::cout << "5" << std::endl;
+    ui->textEdit->insert("5");
 }
 void MainWindow::onSixClicked() {
-    std::cout << "6" << std::endl;
+    ui->textEdit->insert("6");
 }
 void MainWindow::onSevenClicked() {
-    std::cout << "7" << std::endl;
+    ui->textEdit->insert("7");
 }
 void MainWindow::onEightClicked() {
-    std::cout << "8" << std::endl;
+    ui->textEdit->insert("8");
 }
 void MainWindow::onNineClicked() {
-    std::cout << "9" << std::endl;
+    ui->textEdit->insert("9");
 }
 void MainWindow::onFracClicked() {
-    std::cout << "Fraction clicked" << std::endl;
+    ui->textEdit->insert("/");
 }
 void MainWindow::onAddClicked() {
-    std::cout << "+" << std::endl;
+    ui->textEdit->insert("+");
 }
 void MainWindow::onSubClicked() {
-    std::cout << "-" << std::endl;
+    ui->textEdit->insert("-");
 }
 void MainWindow::onTimesClicked() {
-    std::cout << "*" << std::endl;
+    ui->textEdit->insert("*");
 }
 void MainWindow::onDivClicked() {
-    std::cout << "/" << std::endl;
+    ui->textEdit->insert("/");
 }
 void MainWindow::onModeClicked() {
     std::cout << "Mode Clicked" << std::endl;
 }
 void MainWindow::onLn_LogClicked() {
-    std::cout << "Natural log clicked" << std::endl;
+    ui->textEdit->insert("ln(");
 }
 void MainWindow::onSecondClicked() {
     std::cout << "Second clicked" << std::endl;
 }
 void MainWindow::onDecimalClicked() {
-    std::cout << "." << std::endl;
+    ui->textEdit->insert(".");
 }
 void MainWindow::onNegClicked() {
-    std::cout << "(-)" << std::endl;
+    ui->textEdit->insert("(-)");
 }
 void MainWindow::onDeleteClicked() {
-    std::cout << "Delete clicked" << std::endl;
+    QString text = ui->textEdit->text();
+    if (!text.isEmpty()) {
+        text.chop(1);
+        ui->textEdit->setText(text);
+    }
 }
 void MainWindow::onMathClicked() {
     std::cout << "Math clicked" << std::endl;
@@ -162,7 +170,7 @@ void MainWindow::onTableClicked() {
     std::cout << "Table clicked" << std::endl;
 }
 void MainWindow::onPiClicked() {
-    std::cout << "PI clicked" << std::endl;
+    ui->textEdit->insert("PI");
 }
 void MainWindow::onApproxClicked() {
     std::cout << "Approximation clicked" << std::endl;
