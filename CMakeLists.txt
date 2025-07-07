@@ -17,6 +17,10 @@ add_executable(Calculator main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        ChrisMath.h
+        ChrisMath.cpp
+        funct.h
+        funct.cpp
 )
 target_link_libraries(Calculator
         Qt::Core
