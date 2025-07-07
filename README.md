@@ -1,4 +1,5 @@
 A simple cross-platform calculator app built with C++ and Qt. This project demonstrates a basic GUI application capable of performing arithmetic operations and handling simple mathematical expressions.
+
 📋 Features
 
 Basic arithmetic operations: addition, subtraction, multiplication, division.
