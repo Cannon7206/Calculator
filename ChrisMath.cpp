@@ -178,7 +178,7 @@ double Evaluator::applyFunction(const std::string &functName, const double argum
     else if (functName == "exp") return funct::expon(argument);
     else if (functName == "ln") return funct::natLog(argument);
     else if (functName == "sqrt") return funct::squareRoot(argument);
-    else if (functName == "PI") return funct::PI();
+    else if (functName == "PI") return argument*funct::PI();
     else if (functName == "!") return funct::factorial(argument);
     else if (functName == "abs") return funct::dabs(argument);
     else {

@@ -7,6 +7,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include "ChrisMath.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -60,14 +61,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::onEnterClicked() {
     QString input = ui->textEdit->text();
-    ui->textBrowser->append(input + " = ");
+    std::string str = input.toStdString();
+    double ans = ChrisMathParser::evaluate(str);
+    ui->textBrowser->append(input + " = " + QString::number(ans));
     ui->textEdit->clear();
 }
 void MainWindow::onClearClicked() {
     ui->textEdit->clear();
 }
 void MainWindow::onRParaClicked() {
-    ui->textEdit->insert("(");
+    ui->textEdit->insert(")");
 }
 void MainWindow::onLParaClicked() {
     ui->textEdit->insert("(");
